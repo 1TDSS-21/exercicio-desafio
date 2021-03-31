@@ -5,14 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INÍCIO</title>
+
+<!-- Alterações que forem feitas a seguir são da explicação do CSS Externo (dentro do comando head) -->
+<!-- Para utilizar o CSS Externo, precisa criar um novo arquivo (nesse caso: estilo.css), que contempla todo o CSS Interno que foi mostrado. Vai fazer o apontamento desse novo arquivo no head do arquivo html --> 
+<link rel="stylesheet" href="./CSS/estilo.css" type="text/css"> <!-- o stylesheet está relacionado aos estilos, e o href vai referenciar o arquivo criado -->
+
+    <!-- Alterações que forem feitas a seguir são da explicação do CSS Interno (dentro do comando style) -->
+    <!-- O list-style: none faz com que não apareça o bullet antes das imagens -->
+    <!-- As listas elas são originalmente colocadas em bloco. Com o display: inline, está falando para deixar o cabeçalho em linha -->
+    <!-- Esse comando é feito por página. Então se em um trabalho você tiver 1000 páginas, vai precisar adicionar o comando nessas 1000 páginas -->
+    <style>
+        ul{ 
+            list-style: none;
+        }
+        li{
+            display: inline; 
+        }
+    </style>
+    
 </head>
 
-<body>
+<body style="background-color: #faebd7;"> <!-- Prof acrescentou esse comando style para a explicação de CSS Inline -->
+    <!-- depois de color: o prof selecionou o antiquewhite e depois clicou em cima da caixa de cor dele e em cima do código da cor (RGB) -->
+
+<!-- Nos códigos acima, conseguiu mostrar todos os tipos de CSS (Externo, Interno e Inline). Mas tem um problema: o código tem uma ordem para ser
+lido. O código que está apontado nas linhas 9 a 11 vai ser lido antes, depois o que está nas linhas 13 a 24, e por útlimo o que está nas linhas
+28 e 29. Isso significa que o estilo que foi inserido no último código vai sobrepor todos os anteriores porque ele é o último a ser carregado. -->
+
     <div>
         <header>
             <nav>
                 <ul>
-                    <li><a href="./index.html"><img src="./img/house.png" alt="Ícone de casa" title="Página inicial">Página Inicial</a></li>
+                    <li><a href="./index.html"><img src="./img/house.png" alt="Ícone de casa" title="Página inicial"><!-- Se quiser deixar aqui um texto para aparecer depois da imagem, basta escrever aqui, sem nenhum caracter ou comando (Ex.: Página Inicial) --></a></li>
                     <li><a href="./linguagens/linguagens.html"><img src="./img/language.png" alt="Ícone de Linguagens" title="Linguagens"></a></li>
                 </ul>
             </nav>
@@ -27,6 +51,7 @@
         
         <!-- UTILIZAÇÃO DA TAG IMG COM ENDEREÇO INTERNO -->
         <img src="./img/icon.png" alt="FIAP ON" title="FIAP ON">
+        <!-- sempre que vai referenciar algum arquivo para ele aparecer na página, vai digitar "./" as opções vão aparecer como sugestão. Basta ir selecionando quais arquivos quer utilizar -->
     </div>
 
     <!-- UTILIZAÇÃO DA TAG IMG COM OS ATRIBUTOS WIDTH E HEIGHT -->
